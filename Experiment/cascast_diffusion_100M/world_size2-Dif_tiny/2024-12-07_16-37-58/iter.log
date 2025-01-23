@@ -1,0 +1,35 @@
+2024-12-07 16:38:00,554 train INFO: Building config ...
+2024-12-07 16:38:00,555 train INFO: Building dataloaders ...
+2024-12-07 16:38:04,683 train INFO: Train dataloaders build complete
+2024-12-07 16:38:04,685 train INFO: Valid dataloaders build complete
+2024-12-07 16:38:04,685 train INFO: Building models ...
+2024-12-07 16:38:07,804 train INFO: finetune checkpoint path not exist
+2024-12-07 16:38:07,899 train INFO: ####### noise scale: 1.0 ##########
+2024-12-07 16:38:07,900 train INFO: checkpoint is not exist
+2024-12-07 16:38:09,552 train INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-07 16:38:09,621 train INFO: ####### USE SCALE_FACTOR: 1.0 ##########
+2024-12-07 16:38:10,538 train INFO: params casformer: 226383501
+2024-12-07 16:38:10,539 train INFO: params autoencoder_kl: 83607691
+2024-12-07 16:38:10,539 train INFO: begin training ...
+2024-12-07 16:38:10,539 train INFO: epoch_step: 4658
+2024-12-07 16:38:32,975 train INFO: ### USING STD-RESCALING ###
+2024-12-07 16:38:33,044 train INFO: ####### scale factor: 0.48654353618621826 ##########
+2024-12-07 16:38:52,228 train INFO: [20/4658/100000]  lr: 1.9405e-05  eta: 2 days, 9:52:35  iter_time: 1.520  data: 0.912  memory: 23380  MSELoss: 0.9757 (0.9773, 0.9381)
+2024-12-07 16:39:11,439 train INFO: [40/4658/100000]  lr: 2.9305000000000005e-05  eta: 1 day, 18:16:09  iter_time: 1.756  data: 1.119  memory: 23380  MSELoss: 0.9373 (0.9065, 0.6215)
+2024-12-07 16:39:30,607 train INFO: [60/4658/100000]  lr: 3.9205e-05  eta: 1 day, 13:02:27  iter_time: 0.724  data: 0.154  memory: 23380  MSELoss: 0.8707 (0.7315, 0.3554)
+2024-12-07 16:39:49,651 train INFO: [80/4658/100000]  lr: 4.9105e-05  eta: 1 day, 10:23:03  iter_time: 0.425  data: 0.007  memory: 23380  MSELoss: 0.5901 (0.6078, 0.1481)
+2024-12-07 16:40:36,980 train INFO: [100/4658/100000]  lr: 5.9005e-05  eta: 1 day, 16:38:08  iter_time: 2.817  data: 1.261  memory: 23380  MSELoss: 0.3987 (0.5229, 0.1503)
+2024-12-07 16:40:58,204 train INFO: [120/4658/100000]  lr: 6.8905e-05  eta: 1 day, 14:45:49  iter_time: 2.017  data: 0.800  memory: 23380  MSELoss: 0.2618 (0.4558, 0.1853)
+2024-12-07 16:41:14,364 train INFO: [140/4658/100000]  lr: 7.8805e-05  eta: 1 day, 12:25:16  iter_time: 0.426  data: 0.007  memory: 23380  MSELoss: 0.2021 (0.4104, 0.1488)
+2024-12-07 16:41:30,944 train INFO: [160/4658/100000]  lr: 8.8705e-05  eta: 1 day, 10:44:09  iter_time: 0.425  data: 0.007  memory: 23380  MSELoss: 0.1473 (0.3762, 0.1454)
+2024-12-07 16:41:59,449 train INFO: [180/4658/100000]  lr: 9.860500000000001e-05  eta: 1 day, 11:15:40  iter_time: 1.608  data: 0.597  memory: 23380  MSELoss: 0.1163 (0.3486, 0.2017)
+2024-12-07 16:42:19,222 train INFO: [200/4658/100000]  lr: 0.000108505  eta: 1 day, 10:28:10  iter_time: 1.834  data: 0.710  memory: 23380  MSELoss: 0.1120 (0.3259, 0.0895)
+2024-12-07 16:42:36,661 train INFO: [220/4658/100000]  lr: 0.000118405  eta: 1 day, 9:31:33  iter_time: 0.430  data: 0.008  memory: 23380  MSELoss: 0.1131 (0.3080, 0.0760)
+2024-12-07 16:42:55,393 train INFO: [240/4658/100000]  lr: 0.000128305  eta: 1 day, 8:53:22  iter_time: 0.428  data: 0.007  memory: 23380  MSELoss: 0.1176 (0.2935, 0.1143)
+2024-12-07 16:43:24,019 train INFO: [260/4658/100000]  lr: 0.000138205  eta: 1 day, 9:24:13  iter_time: 1.639  data: 0.616  memory: 23380  MSELoss: 0.1101 (0.2793, 0.0869)
+2024-12-07 16:43:56,613 train INFO: [280/4658/100000]  lr: 0.00014810500000000002  eta: 1 day, 10:14:09  iter_time: 3.433  data: 1.511  memory: 23380  MSELoss: 0.1119 (0.2677, 0.1421)
+2024-12-07 16:44:13,418 train INFO: [300/4658/100000]  lr: 0.00015800500000000002  eta: 1 day, 9:29:55  iter_time: 0.431  data: 0.009  memory: 23380  MSELoss: 0.1103 (0.2585, 0.0752)
+2024-12-07 16:44:30,473 train INFO: [320/4658/100000]  lr: 0.000167905  eta: 1 day, 8:52:27  iter_time: 0.433  data: 0.011  memory: 23380  MSELoss: 0.1093 (0.2492, 0.1485)
+2024-12-07 16:44:55,417 train INFO: [340/4658/100000]  lr: 0.000177805  eta: 1 day, 8:57:55  iter_time: 1.432  data: 0.509  memory: 23380  MSELoss: 0.1033 (0.2407, 0.0895)
+2024-12-07 16:45:11,730 train INFO: [360/4658/100000]  lr: 0.000187705  eta: 1 day, 8:22:54  iter_time: 1.363  data: 0.473  memory: 23380  MSELoss: 0.1067 (0.2338, 0.0639)
+2024-12-07 16:45:30,816 train INFO: [380/4658/100000]  lr: 0.000197605  eta: 1 day, 8:03:40  iter_time: 0.427  data: 0.007  memory: 23380  MSELoss: 0.1090 (0.2278, 0.1122)

@@ -1,0 +1,8 @@
+{"time":"2024-12-24T21:56:35.014356852+08:00","level":"INFO","msg":"started logging, with flags","port-filename":"/tmp/tmpo7n2dxiv/port-148874.txt","pid":148874,"debug":false,"disable-analytics":false}
+{"time":"2024-12-24T21:56:35.020137886+08:00","level":"INFO","msg":"FeatureState","shutdownOnParentExitEnabled":false}
+{"time":"2024-12-24T21:56:35.022380617+08:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":148874}
+{"time":"2024-12-24T21:56:35.022953215+08:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":16154,"Zone":""}}
+{"time":"2024-12-24T21:56:35.099772231+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:2609"}
+{"time":"2024-12-24T21:56:35.983025951+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"gabblpbz","id":"127.0.0.1:2609"}
+{"time":"2024-12-24T21:56:36.120481055+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"gabblpbz","id":"127.0.0.1:2609"}
+{"time":"2024-12-24T21:59:07.66366007+08:00","level":"INFO","msg":"Parent process exited, terminating service process."}

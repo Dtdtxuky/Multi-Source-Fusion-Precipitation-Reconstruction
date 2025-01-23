@@ -1,0 +1,13 @@
+2024-12-15 18:15:33,984 test INFO: Building config ...
+2024-12-15 18:15:33,984 test INFO: Building models ...
+2024-12-15 18:15:40,418 test INFO: finetune checkpoint path not exist
+2024-12-15 18:15:40,521 test INFO: ####### noise scale: 1.0 ##########
+2024-12-15 18:15:40,521 test INFO: checkpoint is not exist
+2024-12-15 18:15:42,413 test INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-15 18:15:42,503 test INFO: ####### USE SCALE_FACTOR: 1.0 ##########
+2024-12-15 18:15:46,352 test INFO: last epoch:87.0, metric best:0.004328794819230097
+2024-12-15 18:15:48,557 test INFO: params casformer: 99998989
+2024-12-15 18:15:48,558 test INFO: params autoencoder_kl: 83607691
+2024-12-15 18:15:48,558 test INFO: Building dataloaders ...
+2024-12-15 18:15:49,651 test INFO: valid dataloaders build complete
+2024-12-15 18:15:49,651 test INFO: begin valid ...

@@ -1,0 +1,39 @@
+Launching processes...
+2024-12-24 21:50:41,118 test INFO: Building config ...
+2024-12-24 21:50:41,118 test INFO: Building models ...
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.gscaler = amp.GradScaler(enabled=self.enabled_amp)
+Casformer参数: 100.00M
+autoencoder_kl参数: 83.61M
+Traceback (most recent call last):
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 158, in <module>
+    main(args)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 130, in main
+    subprocess_fn(args)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 30, in subprocess_fn
+    model = builder.get_model()
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/builder.py", line 98, in get_model
+    model = latent_diffusion_model(self.logger, self.tblogger, self.wandb, self.rank, **params)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/latent_diffusion_model.py", line 25, in __init__
+    super().__init__(logger, tblogger, wandb, rank,**params)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py", line 137, in __init__
+    from utils.visualizer import sevir_visualizer
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/visualizer.py", line 12, in <module>
+    from datasets.sevir_util.sevir_cmap import get_cmap, VIL_COLORS, VIL_LEVELS
+ModuleNotFoundError: No module named 'datasets'
+Traceback (most recent call last):
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 158, in <module>
+    main(args)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 130, in main
+    subprocess_fn(args)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py", line 30, in subprocess_fn
+    model = builder.get_model()
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/builder.py", line 98, in get_model
+    model = latent_diffusion_model(self.logger, self.tblogger, self.wandb, self.rank, **params)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/latent_diffusion_model.py", line 25, in __init__
+    super().__init__(logger, tblogger, wandb, rank,**params)
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py", line 137, in __init__
+    from utils.visualizer import sevir_visualizer
+  File "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/visualizer.py", line 12, in <module>
+    from datasets.sevir_util.sevir_cmap import get_cmap, VIL_COLORS, VIL_LEVELS
+ModuleNotFoundError: No module named 'datasets'

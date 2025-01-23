@@ -1,0 +1,151 @@
+tensor_model_parallel_size: 1
+resume: false
+resume_from_config: false
+seed: 0
+cuda: 0
+world_size: 2
+per_cpus: 4
+local_rank: 0
+init_method: tcp://10.140.24.94:50750
+outdir: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast_DiT/Experiment/cascast_diffusion_100M
+cfg: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast_DiT/configs/sevir_used/cascast_diffusion_100M.yaml
+desc: Dif_tiny
+visual_vars: null
+debug: false
+resume_checkpoint: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast_DiT/Experiment/cascast_diffusion_100M/world_size4-Dif_tiny/2024-12-07_18-34-32/checkpoint_latest_23903.pth
+resume_cfg_file: null
+mydataset: Dif
+wandb_name: DiT_100M
+rank: 0
+distributed: true
+dist_backend: nccl
+relative_checkpoint_dir: cascast_diffusion_100M/world_size2-Dif_tiny/2024-12-09_16-57-05
+sevir:
+  type: sevir_latent
+  input_length: 13
+  pred_length: 12
+  total_length: 25
+  base_freq: 5min
+  data_dir: radar:s3://sevir_latent
+  latent_gt_dir: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast/latent_data
+  latent_deterministic_dir: path/to/latent_prediction
+  latent_size: 32x32x1
+dataset:
+  train:
+    type: sevir_latent
+    input_length: 13
+    pred_length: 12
+    total_length: 25
+    base_freq: 5min
+    data_dir: radar:s3://sevir_latent
+    latent_gt_dir: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast/latent_data
+    latent_deterministic_dir: path/to/latent_prediction
+    latent_size: 32x32x1
+  valid:
+    type: sevir_latent
+    input_length: 13
+    pred_length: 12
+    total_length: 25
+    base_freq: 5min
+    data_dir: radar:s3://sevir_latent
+    latent_gt_dir: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast/latent_data
+    latent_deterministic_dir: path/to/latent_prediction
+    latent_size: 32x32x1
+sampler:
+  type: TrainingSampler
+dataloader:
+  num_workers: 16
+  pin_memory: false
+  prefetch_factor: 2
+  persistent_workers: true
+trainer:
+  batch_size: 32
+  valid_batch_size: 1
+  max_epoch: 1
+  max_step: 100000
+model:
+  type: latent_diffusion_model
+  params:
+    diffusion_kwargs:
+      noise_scheduler:
+        DDPMScheduler:
+          num_train_timesteps: 2000
+          beta_start: 0.0001
+          beta_end: 0.02
+          beta_schedule: linear
+          clip_sample_range: 13
+          prediction_type: epsilon
+      classifier_free_guidance:
+        p_uncond: 0.1
+        guidance_weight: 1
+    sub_model:
+      casformer:
+        arch: DiT-custom
+        config:
+          input_size: 32
+          in_channels: 10
+          mlp_ratio: 4.0
+          learn_sigma: false
+          out_channels: 1
+          split_num: 12
+          num_heads: 16
+          single_heads_num: 4
+          hidden_size: 512
+          enc_hidden_size: 256
+          patch_size: 2
+          enc_depth: 16
+          latent_depth: 16
+      autoencoder_kl:
+        in_channels: 1
+        out_channels: 1
+        down_block_types:
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        up_block_types:
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        block_out_channels:
+        - 128
+        - 256
+        - 512
+        - 512
+        layers_per_block: 2
+        latent_channels: 1
+        norm_num_groups: 32
+    save_best: MSE
+    use_ceph: false
+    ceph_checkpoint_path: mpas:s3://sevir/checkpoint
+    metrics_type: None
+    data_type: fp32
+    visualizer:
+      visualizer_type: sevir_visualizer
+      visualizer_step: 4000
+    optimizer:
+      casformer:
+        type: AdamW
+        params:
+          lr: 0.001
+          betas:
+          - 0.9
+          - 0.95
+    lr_scheduler:
+      casformer:
+        by_step: true
+        sched: cosine
+        epochs: 1
+        min_lr: 1.0e-05
+        warmup_lr: 1.0e-05
+        warmup_epochs: 0.02
+        lr_noise: null
+        cooldown_epochs: 0
+    extra_params:
+      loss_type: MSELoss
+      enabled_amp: false
+      log_step: 20
+      predictor_checkpoint_path: None
+      autoencoder_checkpoint_path: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast_new/Experiment/autoencoder_kl_gan/world_size2-Setting3/2024-11-19_20-25-46/checkpoint_latest.pth
+      save_epoch_interval: 5

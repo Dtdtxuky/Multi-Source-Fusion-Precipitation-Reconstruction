@@ -1,0 +1,8 @@
+{"time":"2024-12-24T21:56:35.988890463+08:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-12-24T21:56:35.991382208+08:00","level":"INFO","msg":"created symlink","path":"Experiment/wandb/run-20241224_215635-gabblpbz/logs/debug-core.log"}
+{"time":"2024-12-24T21:56:36.118155607+08:00","level":"INFO","msg":"created new stream","id":"gabblpbz"}
+{"time":"2024-12-24T21:56:36.11940466+08:00","level":"INFO","msg":"stream: started","id":"gabblpbz"}
+{"time":"2024-12-24T21:56:36.119437352+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"gabblpbz"}}
+{"time":"2024-12-24T21:56:36.119637392+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"gabblpbz"}}
+{"time":"2024-12-24T21:56:36.11964136+08:00","level":"INFO","msg":"sender: started","stream_id":"gabblpbz"}
+{"time":"2024-12-24T21:56:36.723141629+08:00","level":"INFO","msg":"Starting system monitor"}

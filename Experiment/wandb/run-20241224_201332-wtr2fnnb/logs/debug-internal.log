@@ -1,0 +1,8 @@
+{"time":"2024-12-24T20:13:32.217974665+08:00","level":"INFO","msg":"using version","core version":"0.18.6"}
+{"time":"2024-12-24T20:13:32.220206569+08:00","level":"INFO","msg":"created symlink","path":"Experiment/wandb/run-20241224_201332-wtr2fnnb/logs/debug-core.log"}
+{"time":"2024-12-24T20:13:32.342635249+08:00","level":"INFO","msg":"created new stream","id":"wtr2fnnb"}
+{"time":"2024-12-24T20:13:32.344092436+08:00","level":"INFO","msg":"stream: started","id":"wtr2fnnb"}
+{"time":"2024-12-24T20:13:32.344213855+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wtr2fnnb"}}
+{"time":"2024-12-24T20:13:32.344585894+08:00","level":"INFO","msg":"sender: started","stream_id":"wtr2fnnb"}
+{"time":"2024-12-24T20:13:32.34462659+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wtr2fnnb"}}
+{"time":"2024-12-24T20:13:32.775506856+08:00","level":"INFO","msg":"Starting system monitor"}

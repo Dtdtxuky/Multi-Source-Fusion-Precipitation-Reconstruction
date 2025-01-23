@@ -1,0 +1,123 @@
+tensor_model_parallel_size: 1
+resume: false
+resume_from_config: false
+seed: 0
+cuda: 0
+world_size: 2
+per_cpus: 13
+local_rank: 0
+init_method: tcp://10.140.24.72:27337
+outdir: /mnt/petrelfs/xukaiyi/CodeSpace/CasCast_new/Experiment/autoencoder_kl_gan
+cfg: ./configs/sevir_used/autoencoder_kl_gan.yaml
+desc: Setting3
+visual_vars: null
+debug: false
+resume_checkpoint: null
+resume_cfg_file: null
+rank: 0
+distributed: true
+dist_backend: nccl
+relative_checkpoint_dir: autoencoder_kl_gan/world_size2-Setting3/2024-11-19_20-11-35
+sevir:
+  type: sevir_pretrain
+dataset:
+  train:
+    type: sevir_pretrain
+  valid:
+    type: sevir_pretrain
+sampler:
+  type: TrainingSampler
+dataloader:
+  num_workers: 8
+  pin_memory: false
+  prefetch_factor: 2
+  persistent_workers: true
+trainer:
+  batch_size: 16
+  valid_batch_size: 8
+  max_epoch: 1
+  max_step: 200000
+model:
+  type: autoencoder_kl_gan_model
+  params:
+    sub_model:
+      autoencoder_kl:
+        in_channels: 1
+        out_channels: 1
+        down_block_types:
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        - DownEncoderBlock2D
+        up_block_types:
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        - UpDecoderBlock2D
+        block_out_channels:
+        - 128
+        - 256
+        - 512
+        - 512
+        layers_per_block: 2
+        latent_channels: 1
+        norm_num_groups: 32
+      lpipsWithDisc:
+        disc_start: 25001
+        logvar_init: 0.0
+        kl_weight: 1.0e-06
+        pixelloss_weight: 1.0
+        disc_num_layers: 3
+        disc_in_channels: 1
+        disc_factor: 1.0
+        disc_weight: 0.5
+        perceptual_weight: 0.0
+    save_best: MSE
+    use_ceph: false
+    ceph_checkpoint_path: mpas:s3://sevir/checkpoint
+    metrics_type: SEVIRSkillScore
+    data_type: fp32
+    visualizer:
+      visualizer_type: sevir_visualizer
+      visualizer_step: 1000
+    optimizer:
+      autoencoder_kl:
+        type: AdamW
+        params:
+          lr: 0.0001
+          betas:
+          - 0.9
+          - 0.999
+          weight_decay: 1.0e-05
+      lpipsWithDisc:
+        type: AdamW
+        params:
+          lr: 0.0001
+          betas:
+          - 0.9
+          - 0.999
+          weight_decay: 1.0e-05
+    lr_scheduler:
+      autoencoder_kl:
+        by_step: true
+        sched: cosine
+        epochs: 1
+        min_lr: 1.0e-06
+        warmup_lr: 1.0e-06
+        warmup_epochs: 0.1
+        lr_noise: null
+        cooldown_epochs: 0
+      lpipsWithDisc:
+        by_step: true
+        sched: cosine
+        epochs: 1
+        min_lr: 1.0e-06
+        warmup_lr: 1.0e-06
+        warmup_epochs: 0.1
+        lr_noise: null
+        cooldown_epochs: 0
+    extra_params:
+      loss_type: MSELoss
+      enabled_amp: false
+      log_step: 20
+      z_score_delta: false

@@ -1,0 +1,259 @@
+Launching processes...
+2024-12-24 19:59:00,113 test INFO: Building config ...
+2024-12-24 19:59:00,113 test INFO: Building models ...
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.gscaler = amp.GradScaler(enabled=self.enabled_amp)
+4
+Casformer参数: 100.00M
+autoencoder_kl参数: 83.61M
+2024-12-24 19:59:13,173 test INFO: finetune checkpoint path not exist
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/src/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+############# USING SAMPLER: DDIMScheduler #############
+2024-12-24 19:59:13,327 test INFO: ####### noise scale: 1.0 ##########
+load from predictor_ckpt_path: None
+2024-12-24 19:59:13,327 test INFO: checkpoint is not exist
+load from autoencoder_ckpt_path: /mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/ae_checkpoint_latest.pth
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py:287: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_dict = torch.load(checkpoint_path, map_location=torch.device('cpu'))
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+dict_keys(['autoencoder_kl', 'lpipsWithDisc'])
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+warning!!!!!!!!!!!!!: skip load of lpipsWithDisc
+2024-12-24 19:59:15,236 test INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-24 19:59:15,369 test INFO: ####### USE SCALE_FACTOR: 1.0 ##########
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+dict_keys(['casformer', 'autoencoder_kl'])
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2024-12-24 19:59:19,068 test INFO: last epoch:87.0, metric best:0.004328794819230097
+2024-12-24 19:59:23,181 test INFO: params casformer: 99998989
+2024-12-24 19:59:23,182 test INFO: params autoencoder_kl: 83607691
+2024-12-24 19:59:23,182 test INFO: Building dataloaders ...
+Using patch2all
+batch: 1
+2024-12-24 19:59:26,087 test INFO: valid dataloaders build complete
+2024-12-24 19:59:26,087 test INFO: begin valid ...
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/metrics.py:446: FutureWarning: Decorating classes is deprecated and will be disabled in future versions. You should only decorate functions or methods. To preserve the current behavior of class decoration, you can directly decorate the `__init__` method and nothing else.
+  class cal_FVD:
+0.49429234862327576
+total_step: 572
+idx: 1
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.3741759490793362, csi_pool4_thr1.0:0.3629737609329446, csi_pool8_thr1.0:0.35944700460829493
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.35458589281931796, csi_pool4_thr2.0:0.4095744680851064, csi_pool8_thr2.0:0.3870967741935484
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.14956736711990112, csi_pool4_thr5.0:0.22058823529411764, csi_pool8_thr5.0:0.24
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.7487602829933167
+idx: 2
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.017259598450158505, csi_pool4_thr1.0:0.03819444444444445, csi_pool8_thr1.0:0.06140350877192982
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.6336448788642883
+idx: 3
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.001394700139470014, csi_pool4_thr1.0:0.007633587786259542, csi_pool8_thr1.0:0.019230769230769232
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.8785681128501892
+idx: 4
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.39135021097046413, csi_pool4_thr1.0:0.45454545454545453, csi_pool8_thr1.0:0.45871559633027525
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.3532810565414775, csi_pool4_thr2.0:0.4, csi_pool8_thr2.0:0.4647887323943662
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.15664556962025317, csi_pool4_thr5.0:0.2112676056338028, csi_pool8_thr5.0:0.25806451612903225
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/results.py:156: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(15, 10))
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.6098694801330566
+idx: 5
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.2818037556202063, csi_pool4_thr1.0:0.2929745889387145, csi_pool8_thr1.0:0.3220338983050847
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.27602523659305994, csi_pool4_thr2.0:0.3123359580052493, csi_pool8_thr2.0:0.3488372093023256
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.08545454545454545, csi_pool4_thr5.0:0.16822429906542055, csi_pool8_thr5.0:0.24390243902439024
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.924569845199585
+idx: 6
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.09583390622851642, csi_pool4_thr1.0:0.14714714714714713, csi_pool8_thr1.0:0.2163265306122449
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.04753143207605029, csi_pool4_thr2.0:0.0673076923076923, csi_pool8_thr2.0:0.09243697478991597
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.9586611986160278
+idx: 7
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.1064431867653461, csi_pool4_thr1.0:0.18, csi_pool8_thr1.0:0.2518518518518518
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.04662457503642545, csi_pool4_thr2.0:0.0670391061452514, csi_pool8_thr2.0:0.10294117647058823
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.6825882792472839
+idx: 8
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:nan, csi_pool4_thr5.0:nan, csi_pool8_thr5.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.08530271798372269
+idx: 9
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.06666666666666667
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.13344532251358032
+idx: 10
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.684638500213623
+idx: 11
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.9190517067909241
+idx: 12
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.43315347721822545, csi_pool4_thr1.0:0.42071611253196933, csi_pool8_thr1.0:0.398406374501992
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.3552456839309429, csi_pool4_thr2.0:0.3970276008492569, csi_pool8_thr2.0:0.43333333333333335
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0828861061419201, csi_pool4_thr5.0:0.11888111888111888, csi_pool8_thr5.0:0.125
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.8971274495124817
+idx: 13
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.272280270436386, csi_pool4_thr1.0:0.3161764705882353, csi_pool8_thr1.0:0.3333333333333333
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.12837316885119507, csi_pool4_thr2.0:0.19724770642201836, csi_pool8_thr2.0:0.2638888888888889
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.01639344262295082, csi_pool8_thr5.0:0.03571428571428571
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_10.0.png
+Step:2021072611, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_15.0.png
+Step:2021072611, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_20.0.png
+rmse:0.7773178815841675
+idx: 14
+start sampling
+end sampling
+Step:2021072611, csi_pool1_thr1.0:0.01426220515633571, csi_pool4_thr1.0:0.021505376344086023, csi_pool8_thr1.0:0.0410958904109589
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_1.0.png
+Step:2021072611, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_2.0.png
+Step:2021072611, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/test_vis/2024-12-24_19-59-27/2021072611_5.0.png
+Step:2021072611, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan

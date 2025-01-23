@@ -1,0 +1,158 @@
+{
+  "os": "Linux-3.10.0-957.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "startedAt": "2024-12-24T12:24:43.805327Z",
+  "args": [
+    "--init_method",
+    "tcp://127.0.0.1:24818",
+    "--world_size",
+    "1",
+    "--per_cpus",
+    "8",
+    "--batch_size",
+    "1",
+    "--num_workers",
+    "8",
+    "--cfgdir",
+    "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt",
+    "--pred_len",
+    "12",
+    "--test_name",
+    "test",
+    "--ens_member",
+    "1",
+    "--cfg_weight",
+    "1",
+    "--metrics_type",
+    "SEVIRSkillScore",
+    "--mydataset",
+    "patch2all"
+  ],
+  "program": "/mnt/petrelfs/xukaiyi/CodeSpace/DiT/evaluation.py",
+  "codePath": "evaluation.py",
+  "git": {
+    "remote": "https://github.com/OpenEarthLab/CasCast.git",
+    "commit": "487a68b5ade9aa829fe7df2e8f6746b4d9acc233"
+  },
+  "email": "dtdtdtxky@gmail.com",
+  "root": "./Experiment",
+  "host": "SH-IDC1-10-140-24-105",
+  "username": "xukaiyi",
+  "executable": "/mnt/petrelfs/xukaiyi/miniconda3/envs/py3.10/bin/python",
+  "codePathLocal": "evaluation.py",
+  "cpu_count": 128,
+  "cpu_count_logical": 256,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 8,
+  "disk": {
+    "/": {
+      "total": "772716625920",
+      "used": "26847363072"
+    }
+  },
+  "memory": {
+    "total": "1081885802496"
+  },
+  "cpu": {
+    "count": 128,
+    "countLogical": 256
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "cluster_sproject2",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "8",
+    "cpus_per_task": "8",
+    "gtids": "0",
+    "job_account": "research",
+    "job_cpus_per_node": "8",
+    "job_gid": "200002797",
+    "job_id": "4889788",
+    "job_name": "python",
+    "job_nodelist": "SH-IDC1-10-140-24-105",
+    "job_num_nodes": "1",
+    "job_partition": "sproject2",
+    "job_qos": "normal",
+    "job_uid": "200002797",
+    "job_user": "xukaiyi",
+    "jobid": "4889788",
+    "launch_node_ipaddr": "10.140.24.31",
+    "localid": "0",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "SH-IDC1-10-140-24-105",
+    "nprocs": "1",
+    "ntasks": "1",
+    "ntasks_per_node": "1",
+    "prio_process": "0",
+    "procid": "0",
+    "srun_comm_host": "10.140.24.31",
+    "srun_comm_port": "21445",
+    "step_gpus": "7",
+    "step_id": "0",
+    "step_launcher_port": "21445",
+    "step_nodelist": "SH-IDC1-10-140-24-105",
+    "step_num_nodes": "1",
+    "step_num_tasks": "1",
+    "step_tasks_per_node": "1",
+    "stepid": "0",
+    "submit_dir": "/mnt/petrelfs/xukaiyi/CodeSpace/DiT",
+    "submit_host": "SH-IDC1-10-140-24-31",
+    "task_pid": "53582",
+    "tasks_per_node": "1",
+    "topology_addr": "SH-IDC1-10-140-24-105",
+    "topology_addr_pattern": "node",
+    "umask": "0002",
+    "working_cluster": "cluster_sproject2:SH-IDC1-10-140-24-34:6817:9216:109"
+  },
+  "cudaVersion": "12.0"
+}

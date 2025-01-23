@@ -1,0 +1,17 @@
+
+/train_job
+/tools
+/wandb
+/None
+/diffusion_noise
+/preprocess
+/wandb
+**/__pycache__
+**/valid_options.yaml
+
+
+*.pyc
+*.pth
+*.pkl
+*.pt
+*.npy

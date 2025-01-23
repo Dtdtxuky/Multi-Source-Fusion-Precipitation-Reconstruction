@@ -1,0 +1,14 @@
+2024-12-07 16:58:49,690 train INFO: Building config ...
+2024-12-07 16:58:49,690 train INFO: Building dataloaders ...
+2024-12-07 16:58:53,775 train INFO: Train dataloaders build complete
+2024-12-07 16:58:53,777 train INFO: Valid dataloaders build complete
+2024-12-07 16:58:53,777 train INFO: Building models ...
+2024-12-07 16:58:55,626 train INFO: finetune checkpoint path not exist
+2024-12-07 16:58:55,746 train INFO: ####### noise scale: 1.0 ##########
+2024-12-07 16:58:55,746 train INFO: checkpoint is not exist
+2024-12-07 16:58:57,555 train INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-07 16:58:57,632 train INFO: ####### USE SCALE_FACTOR: 1.0 ##########
+2024-12-07 16:58:58,302 train INFO: params casformer: 99998989
+2024-12-07 16:58:58,302 train INFO: params autoencoder_kl: 83607691
+2024-12-07 16:58:58,303 train INFO: begin training ...
+2024-12-07 16:58:58,303 train INFO: epoch_step: 1165

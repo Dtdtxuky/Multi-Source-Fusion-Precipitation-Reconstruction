@@ -1,0 +1,10 @@
+2024-12-09 16:57:07,646 train INFO: Building config ...
+2024-12-09 16:57:07,646 train INFO: Building dataloaders ...
+2024-12-09 16:57:12,583 train INFO: Train dataloaders build complete
+2024-12-09 16:57:12,585 train INFO: Valid dataloaders build complete
+2024-12-09 16:57:12,586 train INFO: Building models ...
+2024-12-09 16:57:14,776 train INFO: finetune checkpoint path not exist
+2024-12-09 16:57:14,888 train INFO: ####### noise scale: 1.0 ##########
+2024-12-09 16:57:14,889 train INFO: checkpoint is not exist
+2024-12-09 16:57:16,754 train INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-09 16:57:16,822 train INFO: ####### USE SCALE_FACTOR: 1.0 ##########

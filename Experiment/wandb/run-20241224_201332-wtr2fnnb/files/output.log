@@ -1,0 +1,501 @@
+Launching processes...
+2024-12-24 20:13:33,606 test INFO: Building config ...
+2024-12-24 20:13:33,607 test INFO: Building models ...
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.gscaler = amp.GradScaler(enabled=self.enabled_amp)
+4
+Casformer参数: 100.00M
+autoencoder_kl参数: 83.61M
+2024-12-24 20:13:41,003 test INFO: finetune checkpoint path not exist
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/src/diffusers/utils/outputs.py:63: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+############# USING SAMPLER: DDIMScheduler #############
+2024-12-24 20:13:41,136 test INFO: ####### noise scale: 1.0 ##########
+load from predictor_ckpt_path: None
+2024-12-24 20:13:41,136 test INFO: checkpoint is not exist
+load from autoencoder_ckpt_path: /mnt/petrelfs/xukaiyi/CodeSpace/DiT/ckpt/ae_checkpoint_latest.pth
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/models/model.py:287: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_dict = torch.load(checkpoint_path, map_location=torch.device('cpu'))
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+dict_keys(['autoencoder_kl', 'lpipsWithDisc'])
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+warning!!!!!!!!!!!!!: skip load of lpipsWithDisc
+2024-12-24 20:13:42,746 test INFO: last epoch:81.46586517818807, metric best:0.00030193983548088
+2024-12-24 20:13:42,816 test INFO: ####### USE SCALE_FACTOR: 1.0 ##########
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+dict_keys(['casformer', 'autoencoder_kl'])
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2024-12-24 20:13:45,387 test INFO: last epoch:87.0, metric best:0.004328794819230097
+2024-12-24 20:13:48,924 test INFO: params casformer: 99998989
+2024-12-24 20:13:48,925 test INFO: params autoencoder_kl: 83607691
+2024-12-24 20:13:48,926 test INFO: Building dataloaders ...
+Using patch2all
+batch: 1
+2024-12-24 20:13:50,253 test INFO: valid dataloaders build complete
+2024-12-24 20:13:50,253 test INFO: begin valid ...
+/mnt/petrelfs/xukaiyi/CodeSpace/DiT/utils/metrics.py:446: FutureWarning: Decorating classes is deprecated and will be disabled in future versions. You should only decorate functions or methods. To preserve the current behavior of class decoration, you can directly decorate the `__init__` method and nothing else.
+  class cal_FVD:
+0.49429234862327576
+total_step: 143
+idx: 1
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.4633596392333709, csi_pool4_thr1.0:0.4881422924901186, csi_pool8_thr1.0:0.5089820359281437
+Step:2021072620, csi_pool1_thr2.0:0.3001918158567775, csi_pool4_thr2.0:0.3592592592592593, csi_pool8_thr2.0:0.43956043956043955
+Step:2021072620, csi_pool1_thr5.0:0.0017543859649122807, csi_pool4_thr5.0:0.016666666666666666, csi_pool8_thr5.0:0.047619047619047616
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.6364542841911316
+idx: 2
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.40298248656147045, csi_pool4_thr1.0:0.4523809523809524, csi_pool8_thr1.0:0.49230769230769234
+Step:2021072620, csi_pool1_thr2.0:0.2843216896831844, csi_pool4_thr2.0:0.3527272727272727, csi_pool8_thr2.0:0.4117647058823529
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.9649920463562012
+idx: 3
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.04782608695652174, csi_pool4_thr1.0:0.08270676691729323, csi_pool8_thr1.0:0.14583333333333334
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.338809996843338
+idx: 4
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.4041666666666667, csi_pool4_thr1.0:0.42105263157894735, csi_pool8_thr1.0:0.3711340206185567
+Step:2021072620, csi_pool1_thr2.0:0.37253613666228647, csi_pool4_thr2.0:0.3851851851851852, csi_pool8_thr2.0:0.38
+Step:2021072620, csi_pool1_thr5.0:0.09233791748526522, csi_pool4_thr5.0:0.18, csi_pool8_thr5.0:0.29411764705882354
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5537724494934082
+idx: 5
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3875550759823757, csi_pool4_thr1.0:0.39862542955326463, csi_pool8_thr1.0:0.4157706093189964
+Step:2021072620, csi_pool1_thr2.0:0.3899653979238754, csi_pool4_thr2.0:0.41252699784017277, csi_pool8_thr2.0:0.43790849673202614
+Step:2021072620, csi_pool1_thr5.0:0.06476683937823834, csi_pool4_thr5.0:0.16071428571428573, csi_pool8_thr5.0:0.20454545454545456
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.8783825635910034
+idx: 6
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.41506863669705546, csi_pool4_thr1.0:0.39705882352941174, csi_pool8_thr1.0:0.3868312757201646
+Step:2021072620, csi_pool1_thr2.0:0.4615064502704952, csi_pool4_thr2.0:0.4765840220385675, csi_pool8_thr2.0:0.49557522123893805
+Step:2021072620, csi_pool1_thr5.0:0.0564042303172738, csi_pool4_thr5.0:0.17073170731707318, csi_pool8_thr5.0:0.22580645161290322
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.6044681668281555
+idx: 7
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.003146853146853147, csi_pool4_thr1.0:0.024193548387096774, csi_pool8_thr1.0:0.04597701149425287
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.9207238554954529
+idx: 8
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:0.9288704991340637
+idx: 9
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.26735401153564453
+idx: 10
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:nan, csi_pool4_thr5.0:nan, csi_pool8_thr5.0:nan
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.2399303913116455
+idx: 11
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.3403598964214325
+idx: 12
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3296500920810313, csi_pool4_thr1.0:0.43031784841075793, csi_pool8_thr1.0:0.5144927536231884
+Step:2021072620, csi_pool1_thr2.0:0.11990502572220024, csi_pool4_thr2.0:0.17903930131004367, csi_pool8_thr2.0:0.26582278481012656
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5436238050460815
+idx: 13
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.005786428195686481, csi_pool4_thr1.0:0.01935483870967742, csi_pool8_thr1.0:0.04
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:1.0006177425384521
+idx: 14
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.46335697399527187, csi_pool4_thr1.0:0.5019607843137255, csi_pool8_thr1.0:0.5116279069767442
+Step:2021072620, csi_pool1_thr2.0:0.45715962441314556, csi_pool4_thr2.0:0.5033557046979866, csi_pool8_thr2.0:0.58
+Step:2021072620, csi_pool1_thr5.0:0.2449725776965265, csi_pool4_thr5.0:0.2857142857142857, csi_pool8_thr5.0:0.16666666666666666
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5124050974845886
+idx: 15
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3448585541086664, csi_pool4_thr1.0:0.3746630727762803, csi_pool8_thr1.0:0.41735537190082644
+Step:2021072620, csi_pool1_thr2.0:0.27649440342938797, csi_pool4_thr2.0:0.2992125984251969, csi_pool8_thr2.0:0.31386861313868614
+Step:2021072620, csi_pool1_thr5.0:0.08934707903780069, csi_pool4_thr5.0:0.16666666666666666, csi_pool8_thr5.0:0.24324324324324326
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.1843098402023315
+idx: 16
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.36241267677628214, csi_pool4_thr1.0:0.3895169578622816, csi_pool8_thr1.0:0.39156626506024095
+Step:2021072620, csi_pool1_thr2.0:0.229831335094493, csi_pool4_thr2.0:0.2505694760820046, csi_pool8_thr2.0:0.2866666666666667
+Step:2021072620, csi_pool1_thr5.0:0.06772908366533864, csi_pool4_thr5.0:0.14864864864864866, csi_pool8_thr5.0:0.2
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.8716007471084595
+idx: 17
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.45052631578947366, csi_pool4_thr1.0:0.4767225325884544, csi_pool8_thr1.0:0.5114942528735632
+Step:2021072620, csi_pool1_thr2.0:0.36334498834498835, csi_pool4_thr2.0:0.4189189189189189, csi_pool8_thr2.0:0.45
+Step:2021072620, csi_pool1_thr5.0:0.10611510791366907, csi_pool4_thr5.0:0.17142857142857143, csi_pool8_thr5.0:0.16666666666666666
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5662508010864258
+idx: 18
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0017188037126160192, csi_pool4_thr1.0:0.017857142857142856, csi_pool8_thr1.0:0.04411764705882353
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:1.249975562095642
+idx: 19
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.1653568744659424
+idx: 20
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2727272727272727, csi_pool4_thr1.0:0.3279569892473118, csi_pool8_thr1.0:0.40350877192982454
+Step:2021072620, csi_pool1_thr2.0:0.13582342954159593, csi_pool4_thr2.0:0.1958041958041958, csi_pool8_thr2.0:0.29545454545454547
+Step:2021072620, csi_pool1_thr5.0:0.14285714285714285, csi_pool4_thr5.0:0.21621621621621623, csi_pool8_thr5.0:0.38461538461538464
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5719079375267029
+idx: 21
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2848518111964874, csi_pool4_thr1.0:0.3493150684931507, csi_pool8_thr1.0:0.36
+Step:2021072620, csi_pool1_thr2.0:0.17332200509770604, csi_pool4_thr2.0:0.2268041237113402, csi_pool8_thr2.0:0.29411764705882354
+Step:2021072620, csi_pool1_thr5.0:0.03262955854126679, csi_pool4_thr5.0:0.0784313725490196, csi_pool8_thr5.0:0.25
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.735589861869812
+idx: 22
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0018450184501845018, csi_pool4_thr1.0:0.005434782608695652, csi_pool8_thr1.0:0.029850746268656716
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.4700649380683899
+idx: 23
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.24075350333103607, csi_pool4_thr1.0:0.27611940298507465, csi_pool8_thr1.0:0.31690140845070425
+Step:2021072620, csi_pool1_thr2.0:0.04688279301745636, csi_pool4_thr2.0:0.1111111111111111, csi_pool8_thr2.0:0.18840579710144928
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.6276002526283264
+idx: 24
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.04235176880916791, csi_pool4_thr1.0:0.06832298136645963, csi_pool8_thr1.0:0.07272727272727272
+Step:2021072620, csi_pool1_thr2.0:0.00392156862745098, csi_pool4_thr2.0:0.017699115044247787, csi_pool8_thr2.0:0.058823529411764705
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:1.057210087776184
+idx: 25
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3600286875448243, csi_pool4_thr1.0:0.3713450292397661, csi_pool8_thr1.0:0.38181818181818183
+Step:2021072620, csi_pool1_thr2.0:0.3346570397111913, csi_pool4_thr2.0:0.365296803652968, csi_pool8_thr2.0:0.38235294117647056
+Step:2021072620, csi_pool1_thr5.0:0.033660589060308554, csi_pool4_thr5.0:0.05737704918032787, csi_pool8_thr5.0:0.06818181818181818
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.4578793048858643
+idx: 26
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2984471770936182, csi_pool4_thr1.0:0.32456140350877194, csi_pool8_thr1.0:0.3783783783783784
+Step:2021072620, csi_pool1_thr2.0:0.26474298328602963, csi_pool4_thr2.0:0.29904761904761906, csi_pool8_thr2.0:0.3202247191011236
+Step:2021072620, csi_pool1_thr5.0:0.1571136131013306, csi_pool4_thr5.0:0.20430107526881722, csi_pool8_thr5.0:0.2571428571428571
+Step:2021072620, csi_pool1_thr10.0:0.17577197149643706, csi_pool4_thr10.0:0.32608695652173914, csi_pool8_thr10.0:0.375
+Step:2021072620, csi_pool1_thr15.0:0.05092592592592592, csi_pool4_thr15.0:0.17391304347826086, csi_pool8_thr15.0:0.1
+Step:2021072620, csi_pool1_thr20.0:0.014285714285714285, csi_pool4_thr20.0:0.07692307692307693, csi_pool8_thr20.0:0.16666666666666666
+rmse:1.3529090881347656
+idx: 27
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3691670169959762, csi_pool4_thr1.0:0.4167294649585531, csi_pool8_thr1.0:0.4672897196261682
+Step:2021072620, csi_pool1_thr2.0:0.2895057962172056, csi_pool4_thr2.0:0.3393719806763285, csi_pool8_thr2.0:0.38848920863309355
+Step:2021072620, csi_pool1_thr5.0:0.2317433516251583, csi_pool4_thr5.0:0.2457627118644068, csi_pool8_thr5.0:0.2391304347826087
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.4169458150863647
+idx: 28
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.5178639060724656, csi_pool4_thr1.0:0.5412293853073463, csi_pool8_thr1.0:0.583710407239819
+Step:2021072620, csi_pool1_thr2.0:0.4262365591397849, csi_pool4_thr2.0:0.5124378109452736, csi_pool8_thr2.0:0.5367647058823529
+Step:2021072620, csi_pool1_thr5.0:0.22231139646869985, csi_pool4_thr5.0:0.2890625, csi_pool8_thr5.0:0.3958333333333333
+Step:2021072620, csi_pool1_thr10.0:0.11707317073170732, csi_pool4_thr10.0:0.17857142857142858, csi_pool8_thr10.0:0.14285714285714285
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.08333333333333333, csi_pool8_thr15.0:0.125
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:0.8658237457275391
+idx: 29
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.8734790086746216
+idx: 30
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.6069777607917786
+idx: 31
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.32716358179089544, csi_pool4_thr1.0:0.3764705882352941, csi_pool8_thr1.0:0.390625
+Step:2021072620, csi_pool1_thr2.0:0.0787746170678337, csi_pool4_thr2.0:0.1623931623931624, csi_pool8_thr2.0:0.225
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.09090909090909091
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:0.9125524163246155
+idx: 32
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.26300236406619387, csi_pool4_thr1.0:0.3202846975088968, csi_pool8_thr1.0:0.3870967741935484
+Step:2021072620, csi_pool1_thr2.0:0.16097077761267956, csi_pool4_thr2.0:0.19298245614035087, csi_pool8_thr2.0:0.22413793103448276
+Step:2021072620, csi_pool1_thr5.0:0.00823045267489712, csi_pool4_thr5.0:0.12307692307692308, csi_pool8_thr5.0:0.25
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.7369900941848755
+idx: 33
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.16655290102389078, csi_pool4_thr1.0:0.16901408450704225, csi_pool8_thr1.0:0.16363636363636364
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.7423226237297058
+idx: 34
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.16007488883688276, csi_pool4_thr1.0:0.24853801169590642, csi_pool8_thr1.0:0.3644859813084112
+Step:2021072620, csi_pool1_thr2.0:0.05873417721518987, csi_pool4_thr2.0:0.12834224598930483, csi_pool8_thr2.0:0.22972972972972974
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.5905295014381409
+idx: 35
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.6239964317573595, csi_pool4_thr1.0:0.554945054945055, csi_pool8_thr1.0:0.47619047619047616
+Step:2021072620, csi_pool1_thr2.0:0.6637107776261937, csi_pool4_thr2.0:0.6728971962616822, csi_pool8_thr2.0:0.71875
+Step:2021072620, csi_pool1_thr5.0:0.36836283185840707, csi_pool4_thr5.0:0.49206349206349204, csi_pool8_thr5.0:0.5555555555555556
+Step:2021072620, csi_pool1_thr10.0:0.009302325581395349, csi_pool4_thr10.0:0.10810810810810811, csi_pool8_thr10.0:0.2727272727272727
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:0.9820641875267029
+idx: 36
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.518785660458607, csi_pool4_thr1.0:0.5246376811594203, csi_pool8_thr1.0:0.5432692307692307
+Step:2021072620, csi_pool1_thr2.0:0.48616478590199413, csi_pool4_thr2.0:0.5031712473572939, csi_pool8_thr2.0:0.5144927536231884
+Step:2021072620, csi_pool1_thr5.0:0.3683206106870229, csi_pool4_thr5.0:0.3854166666666667, csi_pool8_thr5.0:0.4157303370786517
+Step:2021072620, csi_pool1_thr10.0:0.09249249249249249, csi_pool4_thr10.0:0.21794871794871795, csi_pool8_thr10.0:0.2962962962962963
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:2.189002513885498
+idx: 37
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.4867100418621072, csi_pool4_thr1.0:0.5255423372988104, csi_pool8_thr1.0:0.5605700712589073
+Step:2021072620, csi_pool1_thr2.0:0.4542414107631499, csi_pool4_thr2.0:0.48255234297108673, csi_pool8_thr2.0:0.5083612040133779
+Step:2021072620, csi_pool1_thr5.0:0.3809739524348811, csi_pool4_thr5.0:0.4281984334203655, csi_pool8_thr5.0:0.5149253731343284
+Step:2021072620, csi_pool1_thr10.0:0.10773130544993663, csi_pool4_thr10.0:0.14201183431952663, csi_pool8_thr10.0:0.234375
+Step:2021072620, csi_pool1_thr15.0:0.03169014084507042, csi_pool4_thr15.0:0.0547945205479452, csi_pool8_thr15.0:0.03571428571428571
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:2.2275171279907227
+idx: 38
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.3902036562594989, csi_pool4_thr1.0:0.4550056242969629, csi_pool8_thr1.0:0.5101663585951941
+Step:2021072620, csi_pool1_thr2.0:0.29870683529913317, csi_pool4_thr2.0:0.3526490066225166, csi_pool8_thr2.0:0.41265822784810124
+Step:2021072620, csi_pool1_thr5.0:0.11241098677517802, csi_pool4_thr5.0:0.155, csi_pool8_thr5.0:0.18181818181818182
+Step:2021072620, csi_pool1_thr10.0:0.02518891687657431, csi_pool4_thr10.0:0.02702702702702703, csi_pool8_thr10.0:0.06
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.8994861841201782
+idx: 39
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.5264071410860401, csi_pool4_thr1.0:0.5854166666666667, csi_pool8_thr1.0:0.6258503401360545
+Step:2021072620, csi_pool1_thr2.0:0.4262792166771952, csi_pool4_thr2.0:0.5067873303167421, csi_pool8_thr2.0:0.5654205607476636
+Step:2021072620, csi_pool1_thr5.0:0.13521594684385382, csi_pool4_thr5.0:0.2328767123287671, csi_pool8_thr5.0:0.3557692307692308
+Step:2021072620, csi_pool1_thr10.0:0.09003831417624521, csi_pool4_thr10.0:0.09859154929577464, csi_pool8_thr10.0:0.13333333333333333
+Step:2021072620, csi_pool1_thr15.0:0.0718562874251497, csi_pool4_thr15.0:0.15384615384615385, csi_pool8_thr15.0:0.13333333333333333
+Step:2021072620, csi_pool1_thr20.0:0.03225806451612903, csi_pool4_thr20.0:0.14285714285714285, csi_pool8_thr20.0:0.25
+rmse:1.3679697513580322
+idx: 40
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.005025125628140704, csi_pool8_thr1.0:0.025
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.8953976035118103
+idx: 41
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.0, csi_pool4_thr1.0:0.0, csi_pool8_thr1.0:0.0
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:0.0, csi_pool4_thr10.0:0.0, csi_pool8_thr10.0:0.0
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.8606023788452148
+idx: 42
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.01854974704890388, csi_pool4_thr1.0:0.0410958904109589, csi_pool8_thr1.0:0.046511627906976744
+Step:2021072620, csi_pool1_thr2.0:0.0, csi_pool4_thr2.0:0.0, csi_pool8_thr2.0:0.0
+Step:2021072620, csi_pool1_thr5.0:0.0, csi_pool4_thr5.0:0.0, csi_pool8_thr5.0:0.0
+Step:2021072620, csi_pool1_thr10.0:nan, csi_pool4_thr10.0:nan, csi_pool8_thr10.0:nan
+Step:2021072620, csi_pool1_thr15.0:nan, csi_pool4_thr15.0:nan, csi_pool8_thr15.0:nan
+Step:2021072620, csi_pool1_thr20.0:nan, csi_pool4_thr20.0:nan, csi_pool8_thr20.0:nan
+rmse:0.2980121374130249
+idx: 43
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2892228739002933, csi_pool4_thr1.0:0.3127413127413127, csi_pool8_thr1.0:0.33
+Step:2021072620, csi_pool1_thr2.0:0.24113968033356498, csi_pool4_thr2.0:0.2898550724637681, csi_pool8_thr2.0:0.32653061224489793
+Step:2021072620, csi_pool1_thr5.0:0.051601423487544484, csi_pool4_thr5.0:0.17543859649122806, csi_pool8_thr5.0:0.2857142857142857
+Step:2021072620, csi_pool1_thr10.0:0.031746031746031744, csi_pool4_thr10.0:0.21052631578947367, csi_pool8_thr10.0:0.125
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:0.9153430461883545
+idx: 44
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2357034795763994, csi_pool4_thr1.0:0.24916943521594684, csi_pool8_thr1.0:0.24770642201834864
+Step:2021072620, csi_pool1_thr2.0:0.2572509457755359, csi_pool4_thr2.0:0.2792207792207792, csi_pool8_thr2.0:0.2727272727272727
+Step:2021072620, csi_pool1_thr5.0:0.16566265060240964, csi_pool4_thr5.0:0.234375, csi_pool8_thr5.0:0.3333333333333333
+Step:2021072620, csi_pool1_thr10.0:0.04964539007092199, csi_pool4_thr10.0:0.13333333333333333, csi_pool8_thr10.0:0.1
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.0184741020202637
+idx: 45
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.2693911592994162, csi_pool4_thr1.0:0.3163265306122449, csi_pool8_thr1.0:0.3939393939393939
+Step:2021072620, csi_pool1_thr2.0:0.2069767441860465, csi_pool4_thr2.0:0.2692307692307692, csi_pool8_thr2.0:0.32142857142857145
+Step:2021072620, csi_pool1_thr5.0:0.08348794063079777, csi_pool4_thr5.0:0.15217391304347827, csi_pool8_thr5.0:0.3076923076923077
+Step:2021072620, csi_pool1_thr10.0:0.0036101083032490976, csi_pool4_thr10.0:0.07692307692307693, csi_pool8_thr10.0:0.2
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.0655580759048462
+idx: 46
+start sampling
+end sampling
+Step:2021072620, csi_pool1_thr1.0:0.5164075993091537, csi_pool4_thr1.0:0.532448377581121, csi_pool8_thr1.0:0.5612244897959183
+Step:2021072620, csi_pool1_thr2.0:0.443881245474294, csi_pool4_thr2.0:0.5146198830409356, csi_pool8_thr2.0:0.564935064935065
+Step:2021072620, csi_pool1_thr5.0:0.20589242891401166, csi_pool4_thr5.0:0.3058823529411765, csi_pool8_thr5.0:0.4044943820224719
+Step:2021072620, csi_pool1_thr10.0:0.10104011887072809, csi_pool4_thr10.0:0.17142857142857143, csi_pool8_thr10.0:0.2222222222222222
+Step:2021072620, csi_pool1_thr15.0:0.0, csi_pool4_thr15.0:0.0, csi_pool8_thr15.0:0.0
+Step:2021072620, csi_pool1_thr20.0:0.0, csi_pool4_thr20.0:0.0, csi_pool8_thr20.0:0.0
+rmse:1.5204038619995117
+idx: 47
+start sampling
